@@ -1,0 +1,64 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: red;
+}
+
+/* h3 {
+    font-family: 'Times New Roman', Times, serif;
+    color: blueviolet;
+} */
+
+.aboutusContent {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
+.img-fluid {
+    width: 80%;
+    height: 80%;
+}
+
+.card,
+.card-body {
+    height: 200px;
+}
+
+.card:hover{
+    cursor: pointer;
+    background-color: rgb(206, 217, 230);
+}
+
+.card-title{
+    color: blueviolet;
+}
+
+.managing-director {
+    opacity: 70%;
+    font-size: small;
+}
+
+@media (max-width: 479px) {
+
+    .blockquote,
+    .blockquote-footer {
+        font-size: 8px;
+    }
+
+    .aboutusContent {
+        font-family: 'Times New Roman', Times, serif;
+        font-size: small;
+    }
+
+    .card,
+    .card-body,
+    .card-title,
+    .card-body {
+        font-size: 8px;
+        max-height: 200px;
+    }
+
+    .managing-director {
+        opacity: 70%;
+        font-size: 8px;
+    }
+}

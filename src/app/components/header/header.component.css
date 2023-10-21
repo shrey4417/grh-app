@@ -1,0 +1,33 @@
+li::marker{font-size:0;}
+
+.carousel-indicators [data-bs-target] {
+    box-sizing: content-box;
+    flex: 0 1 auto;
+    width: 10px; /* change width */
+    height: 10px; /* change height */
+    padding: 0;
+    margin-right: 3px;
+    margin-left: 3px;
+    text-indent: -999px;
+    cursor: pointer;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    opacity: .5;
+    transition: opacity .6s ease;
+    border-radius: 50%;
+}
+
+.carousel > .carousel-inner > .carousel-item > img{
+    width:100% !important;
+    height:180px;
+}
+
+@media (max-width: 479px) {
+    .carousel > .carousel-inner > .carousel-item > img{
+        width:100% !important;
+        height:80px;
+    }
+}

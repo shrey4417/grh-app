@@ -1,0 +1,51 @@
+<!-- Modal trigger button -->
+<button type="button" class="btn btn-lg" data-bs-toggle="modal" data-bs-target="#modalId">
+  Book Appointment
+</button>
+
+<!-- Modal Body -->
+<!-- if you want to close by clicking outside the modal, delete the last endpoint:data-bs-backdrop and data-bs-keyboard -->
+<div class="modal fade" id="modalId" tabindex="-1" data-bs-keyboard="true" role="dialog" aria-labelledby="modalTitleId" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-dialog-centered modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="modalTitleId">Schedule Appointment</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="mb-3">
+                  <input type="text"
+                    class="form-control" name="fullname" id="fullname" aria-describedby="helpId" placeholder="Full Name">
+                  <small id="helpId" class="form-text text-muted">name of patient</small>
+                </div>
+                <div class="mb-3">
+                    <select class="form-select form-select-md" name="doctorname" id="doctorname">
+                        <option value="0">Select Doctor</option>
+                        <option value="1">Dr. Aakansha Sinha</option>
+                        <option value="2">Dr. Jumpa Laheri</option>
+                        <option value="3">Dr. Abhishek Upmanyu</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <input class="form-control" id="date" name="date" placeholder="MM/DD/YYY" type="date"/>
+                </div>
+                <div class="mb-3">
+                  <input type="text"
+                    class="form-control" name="phone" id="phone" aria-describedby="helpId" placeholder="phone number">
+                </div>
+            </div>
+            <div class="modal-footer">
+                <span>
+                    <p style="opacity: 50% !important;">**We will get back to you on your phone number for confirmation</p>
+                </span>
+                <button type="button" class="btn btn-primary">Save</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Optional: Place to the bottom of scripts -->
+<script>
+    const myModal = new bootstrap.Modal(document.getElementById('modalId'), options)
+</script>
