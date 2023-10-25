@@ -6,8 +6,8 @@
     color: aliceblue;
 }
 
-.nav-item {
-    padding-right: 3em;
+.nav-item, .appointment {
+    padding: 5px;
 }
 
 @media (max-width: 479px) {
@@ -16,5 +16,8 @@
     }
     .nav-link {
         color: grey;
+    }
+    .nav-item, .appointment {
+        margin-left: 1em;
     }
 }

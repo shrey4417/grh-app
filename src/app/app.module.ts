@@ -8,6 +8,9 @@ import { MainComponent } from './components/main/main.component';
 import { NavComponent } from './components/nav/nav.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { AppointmentComponent } from './components/appointment/appointment.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { DoctorPortalComponent } from './components/doctor-portal/doctor-portal.component';
+import { FindMyDoctorComponent } from './components/find-my-doctor/find-my-doctor.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { AppointmentComponent } from './components/appointment/appointment.compo
     MainComponent,
     NavComponent,
     FooterComponent,
-    AppointmentComponent
+    AppointmentComponent,
+    DoctorPortalComponent,
+    FindMyDoctorComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -3,14 +3,9 @@ h1 {
     color: red;
 }
 
-/* h3 {
-    font-family: 'Times New Roman', Times, serif;
-    color: blueviolet;
-} */
-
 .aboutusContent {
-    font-family: 'Times New Roman', Times, serif;
-    font-size: medium;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: large;
 }
 
 .img-fluid {
@@ -20,6 +15,7 @@ h1 {
 
 .card,
 .card-body {
+    font-size: large;
     height: 200px;
 }
 
@@ -51,14 +47,12 @@ h1 {
 
     .card,
     .card-body,
-    .card-title,
     .card-body {
         font-size: 8px;
         max-height: 200px;
     }
 
-    .managing-director {
-        opacity: 70%;
-        font-size: 8px;
+    .sidepane {
+        display: none;
     }
 }
