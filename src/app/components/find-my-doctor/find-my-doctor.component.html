@@ -1,9 +1,18 @@
+<app-header></app-header>
+<app-nav></app-nav>
 <div class="container">
     <div class="row m-3">
-        <label for="diagnosisSearch" class="form-label"><h3>Diagnosis</h3></label>
+        <label for="diagnosisSearch" class="form-label">
+            <h3>Diagnosis</h3>
+        </label>
         <div class="col-3">
-            <input type="text"
-                  class="form-control" placeholder="Search Diagnosis" #filter>
+            <div class="mb-3">
+                <select class="form-select form-select-lg" name="department" #filter>
+                    <option value="default" selected>--select diagnosis--</option>
+                    <option value="{{result.dept_name}}" *ngFor="let result of departments">{{result.dept_name}}
+                    </option>
+                </select>
+            </div>
         </div>
         <div class="col-1">
             <button class="btn btn-primary" (click)="filterResults(filter.value)">Search</button>
@@ -15,17 +24,18 @@
             <table class="table table-primary" *ngIf="filteredResultsList.length > 0">
                 <thead>
                     <tr>
+                        <th scope="col">Index</th>
                         <th scope="col">Doctor Name</th>
                         <th scope="col">Specialization</th>
                         <th scope="col">Visitig Hours</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let results of filteredResultsList; index as i">
-                        <td scope="row">{{i}}</td>
-                        <td>results.doctorsName</td>
-                        <td>results.specialization</td>
-                        <td>results.visitingHours</td>
+                    <tr *ngFor="let result of filteredResultsList; index as i">
+                        <td scope="row">{{i+1}}</td>
+                        <td>{{result.name}}</td>
+                        <td>{{result.department}}</td>
+                        <td>{{result.opdtimings}}</td>
                     </tr>
                 </tbody>
             </table>

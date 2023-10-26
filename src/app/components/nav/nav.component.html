@@ -6,23 +6,23 @@
     <div class="navbar-collapse" id="collapsibleNavId">
         <ul class="navbar-nav me-auto">
             <li class="nav-item">
-                <a class="nav-link" routerLink="/" routerLinkActive="active" aria-current="page">Home</a>
+                <a class="nav-link" routerLink="/home" aria-current="page">Home</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" routerLink="/find-my-doctor" routerLinkActive="active">Find your doctor</a>
+                <a class="nav-link" routerLink="/find-my-doctor">Find your doctor</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Patient Portal</a>
+                <a class="nav-link" routerLink="/ourService">Our Services</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="#">Doctor Portal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Admin Portal</a>
+                <a class="nav-link" routerLink="/career">Career</a>
             </li>
         </ul>
         <div class="d-flex appointment">
             <app-appointment></app-appointment>
+        </div>
+        <div class="d-flex appointment">
+            <button class="btn btn-lg btn-login" routerLink="/login">Login</button>
         </div>
     </div>
 </nav>

@@ -25,9 +25,17 @@ li::marker{font-size:0;}
     height:180px;
 }
 
+.logo {
+    height:180px;
+}
+
 @media (max-width: 479px) {
     .carousel > .carousel-inner > .carousel-item > img{
         width:100% !important;
+        height:80px;
+    }
+
+    .logo {
         height:80px;
     }
 }
