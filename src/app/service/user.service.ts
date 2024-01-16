@@ -1,17 +1,21 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { FormGroup } from '@angular/forms';
 import { Appointment } from '../dto/Appointment';
+import { BehaviorSubject, finalize } from 'rxjs';
+import { CatalogService } from './catalog.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  private url = 'http://localhost:8080/';
+
+  public loading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false)
+  public isLoading(state: boolean): void { this.loading.next(state) }
 
   bookAppointment(appointment : Appointment) {
-    return this.http.post<any>(this.url + 'appointment', appointment);
+    this.isLoading(true);
+    return this.http.post<any>(CatalogService.url + 'appointment', appointment).pipe(finalize(() => this.isLoading(false)));
   }
 
   constructor(private http:HttpClient) { }

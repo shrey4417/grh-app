@@ -1,16 +1,16 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Department } from '../dto/Department';
+import { CatalogService } from './catalog.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class DepartmentService {
   
-  private url = 'http://localhost:8080/'
 
   getDepartments() {
-    return this.http.get<Department[]>(this.url + 'departments');
+    return this.http.get<Department[]>(CatalogService.url + 'departments');
   }
 
   constructor(private http:HttpClient) { }
